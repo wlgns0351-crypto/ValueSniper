@@ -10,4 +10,5 @@ MAX_DEBT_RATIO = 2.0        # 부채비율(부채/EBITDA) 2배 이하 (재무 �
 TARGET_TICKERS = []         # 비워두면 S&P500 상위 종목 자동 스캔, ['AMZN', 'GOOGL'] 처럼 지정 가능
 
 # [NEW] 카카오 REST API 키 (내 애플리케이션 > 앱 키 > REST API 키)
-KAKAO_API_KEY = "cde60114fe6475f79154e23cc81d27e0"
+
+KAKAO_API_KEY = "SECRET"
