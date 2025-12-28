@@ -1,14 +1,16 @@
-# 투자 원칙 설정
-INITIAL_SEED = 10000        # 총 시드머니 ($)
-SAFE_MARGIN = 0.2           # 안전마진 20%
-STOP_LOSS_RATE = -0.1       # 손절 기준 (-10%)
-TAKE_PROFIT_RATE = 0.2      # 익절 기준 (+20%)
-
-# 스크리닝 필터 (강화된 기능)
-MIN_MARKET_CAP_B = 10       # 시가총액 최소 100억 달러 이상 (잡주 제외)
-MAX_DEBT_RATIO = 2.0        # 부채비율(부채/EBITDA) 2배 이하 (재무 건전성)
-TARGET_TICKERS = []         # 비워두면 S&P500 상위 종목 자동 스캔, ['AMZN', 'GOOGL'] 처럼 지정 가능
-
-# [NEW] 카카오 REST API 키 (내 애플리케이션 > 앱 키 > REST API 키)
-
 KAKAO_API_KEY = "SECRET"
+
+# [ValueSniper 설정 파일]
+
+# 1. 안전마진 (할인율)
+# 0.2 = 적정가보다 20% 싸야 산다
+SAFE_MARGIN = 0.2
+
+# 2. 분할 매수 설정 (물타기 기준)
+# 1차 매수 후 15% 더 떨어지면 2차 매수 신호 보냄
+SCALE_IN_DROP = 0.15 
+
+# 3. 대상 종목
+# "ALL"로 쓰면 S&P 500 전 종목을 스캔합니다. (시간 소요됨)
+# 특정 종목만 보려면 리스트로 적으세요. 예: ["GOOGL", "TSLA", "AAPL"]
+TARGET_TICKERS = "ALL"
